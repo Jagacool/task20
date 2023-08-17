@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #141414; /* Dark background similar to Netflix */
+  background: #8758ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,11 +25,10 @@ h1 {
 }
 
 .TodoWrapper {
-  background: #fff; /* White background for cards */
+  background: #1A1A40;
   margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
 
 .TodoForm {
@@ -39,7 +38,7 @@ h1 {
 .todo-input {
   outline: none;
   background: none;
-  border: 1px solid #e50914; /* Red color similar to Netflix */
+  border: 1px solid #8758ff;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -52,7 +51,7 @@ h1 {
 }
 
 .todo-btn {
-  background: #e50914; /* Red color similar to Netflix */
+  background: #8758ff;
   color: #fff;
   border: none;
   padding: 0.55rem;
@@ -63,12 +62,12 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff; /* White background for cards */
-  color: #000; /* Black text color */
+  background: #8758ff;
+  color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  cursor: pointer;
 }
 
 .fa-trash {
