@@ -5,14 +5,15 @@ import { Todo } from './Todo';
 import { v4 as uuidv4 } from 'uuid';
 
 export const TodoWrapper = () => {
-  const [todos, setTodos] = useState([]);
+  // ...
 
-  const addTodo = (todo) => {
-    setTodos([
-      ...todos,
-      { id: uuidv4(), ...todo, isEditing: false },
-    ]);
-  }
-
-  // Rest of the code
+  return (
+    <div className="TodoWrapper">
+      <h1>Get Things Done !</h1>
+      <TodoForm addTodo={addTodo} />
+      {todos.map((todo) => (
+        <Todo key={todo.id} todo={todo} /* CRUD functions and status dropdown handler */ />
+      ))}
+    </div>
+  );
 };
