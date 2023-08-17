@@ -1,18 +1,15 @@
-// TodoForm.js
 import React, { useState } from 'react';
 
 export const TodoForm = ({ addTodo }) => {
   const [task, setTask] = useState('');
   const [description, setDescription] = useState('');
-  const [status, setStatus] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (task) {
-      addTodo({ task, description, status });
+      addTodo({ task, description, status: 'notCompleted' });
       setTask('');
       setDescription('');
-      setStatus(false);
     }
   };
 
@@ -22,8 +19,8 @@ export const TodoForm = ({ addTodo }) => {
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
-        className="todo-input" 
-        placeholder="Task name"
+        className="todo-input"
+        placeholder="What is the task today?"
       />
       <input
         type="text"
