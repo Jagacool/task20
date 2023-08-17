@@ -1,19 +1,11 @@
-import React, { useState } from 'react';
-import TodoList from './TodoList';
+// App.js
 import './App.css';
+import { TodoWrapper } from './components/TodoWrapper';
 
 function App() {
-  const [todos, setTodos] = useState([]);
-
-  // Define functions for CRUD operations (add, edit, delete, toggle status)
-
   return (
     <div className="App">
-      <h1>Todo App</h1>
-      <TodoList
-        todos={todos}
-        // Pass the CRUD functions to TodoList component
-      />
+      <TodoWrapper />
     </div>
   );
 }
