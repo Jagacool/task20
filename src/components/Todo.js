@@ -1,29 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
-export const Todo = ({ todo, deleteTodo, editTodo, toggleComplete, editTask }) => {
-  const [statusDropdown, setStatusDropdown] = useState(false);
-
+export const Todo = ({
+  task,
+  deleteTodo,
+  editTodo,
+  toggleComplete,
+  toggleStatusDropdown,
+}) => {
   return (
     <div className="Todo">
-      <p
-        className={`${todo.completed ? 'completed' : ''}`}
-        onClick={() => toggleComplete(todo.id)}
-        onMouseEnter={() => setStatusDropdown(true)}
-        onMouseLeave={() => setStatusDropdown(false)}
-      >
-        {todo.task}
-        {statusDropdown && (
-          <div className="status-dropdown">
-            <div onClick={() => editTask('Not Completed', todo.id)}>Not Completed</div>
-            <div onClick={() => editTask('Completed', todo.id)}>Completed</div>
-          </div>
-        )}
+      <p className={`${task.completed ? 'completed' : ''}`} onClick={() => toggleComplete(task.id)}>
+        {task.task}
       </p>
+      <p>{task.description}</p>
       <div>
-        <FontAwesomeIcon icon={faPenToSquare} onClick={() => editTodo(todo.id)} />
-        <FontAwesomeIcon icon={faTrash} onClick={() => deleteTodo(todo.id)} />
+        {task.showStatusDropdown ? (
+          <select value={task.status} onChange={(e) => toggleStatusDropdown(task.id, e.target.value)}>
+            <option value="notCompleted">Not Completed</option>
+            <option value="completed">Completed</option>
+          </select>
+        ) : (
+          <p className={`${task.completed ? 'completed' : ''}`} onClick={() => toggleComplete(task.id)}>
+            {task.task}
+          </p>
+        )}
+        <FontAwesomeIcon icon={faPenToSquare} onClick={() => editTodo(task.id)} />
+        <FontAwesomeIcon icon={faTrash} onClick={() => deleteTodo(task.id)} />
       </div>
     </div>
   );
