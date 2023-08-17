@@ -22,7 +22,7 @@ export const TodoForm = ({ addTodo }) => {
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
-        className="todo-input"
+        className="todo-input" 
         placeholder="Task name"
       />
       <input
