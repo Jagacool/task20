@@ -16,3 +16,34 @@ export const Todo = ({ todo, deleteTodo, editTodo, toggleComplete }) => {
     </div>
   );
 };
+
+
+
+// Todo.js
+import React, { useState } from 'react';
+
+export const Todo = ({ todo, deleteTodo, editTodo, toggleComplete }) => {
+  const [statusDropdown, setStatusDropdown] = useState(false);
+
+  return (
+    <div className="Todo">
+      <p
+        className={`${todo.completed ? 'completed' : ''}`}
+        onClick={() => toggleComplete(todo.id)}
+        onMouseEnter={() => setStatusDropdown(true)}
+        onMouseLeave={() => setStatusDropdown(false)}
+      >
+        {todo.task}
+        {statusDropdown && (
+          <div className="status-dropdown">
+            <div onClick={() => toggleComplete(todo.id)}>Not Completed</div>
+            <div onClick={() => toggleComplete(todo.id)}>Completed</div>
+          </div>
+        )}
+      </p>
+      <div>
+        {/* Edit and Delete icons */}
+      </div>
+    </div>
+  );
+};
