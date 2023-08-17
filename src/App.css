@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #8758ff;
+  background: #ff69b4; /* Barbie pink background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,13 +19,13 @@ body {
 }
 
 h1 {
-  color: #fff;
+  color: #ff69b4; /* Barbie pink text color */
   margin-bottom: 0.5rem;
   font-size: 1.75rem;
 }
 
 .TodoWrapper {
-  background: #8758ff; /* Updated background color */
+  background: #f4c2e0; /* Light pink background */
   margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
@@ -38,7 +38,7 @@ h1 {
 .todo-input {
   outline: none;
   background: none;
-  border: 1px solid #8758ff;
+  border: 1px solid #ff69b4; /* Barbie pink border */
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -51,7 +51,7 @@ h1 {
 }
 
 .todo-btn {
-  background: #8758ff;
+  background: #ff69b4; /* Barbie pink button background */
   color: #fff;
   border: none;
   padding: 0.55rem;
@@ -62,8 +62,8 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #8758ff;
-  color: #fff; /* Updated task color */
+  background: #ff69b4; /* Barbie pink task background */
+  color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
