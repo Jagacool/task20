@@ -8,11 +8,10 @@
 }
 
 body {
-  background: #f2f2f2; /* Light gray background */
+  background: #8758ff;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .App {
@@ -20,17 +19,16 @@ body {
 }
 
 h1 {
-  color: #2874f0; /* Flipkart blue text color */
+  color: #fff;
   margin-bottom: 0.5rem;
   font-size: 1.75rem;
 }
 
 .TodoWrapper {
-  background: #fff; /* White background */
-  margin-top: 2rem;
+  background: #1A1A40;
+  margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 .TodoForm {
@@ -40,42 +38,36 @@ h1 {
 .todo-input {
   outline: none;
   background: none;
-  border: 1px solid #2874f0; /* Flipkart blue border */
+  border: 1px solid #8758ff;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
   width: 300px;
-  color: #333; /* Dark gray text color */
+  color: #fff;
 }
 
 .todo-input::placeholder {
-  color: #999; /* Light gray placeholder color */
+  color: #ffffff4d;
 }
 
 .todo-btn {
-  background: #2874f0; /* Flipkart blue button background */
+  background: #8758ff;
   color: #fff;
   border: none;
   padding: 0.55rem;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.todo-btn:hover {
-  background: #1565c0; /* Darker blue on hover */
 }
 
 .Todo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
-  color: #333;
+  background: #8758ff;
+  color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
   cursor: pointer;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Light shadow on task items */
 }
 
 .fa-trash {
@@ -83,6 +75,6 @@ h1 {
 }
 
 .completed {
-  color: #999; /* Light gray for completed tasks */
+  color: #c5aeff;
   text-decoration: line-through;
 }
